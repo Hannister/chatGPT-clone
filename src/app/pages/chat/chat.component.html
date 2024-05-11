@@ -1,0 +1,8 @@
+<div
+  [appScrollToBottom]="chatService.messages$ | async"
+  class="chat-container"
+  #scrollMe
+>
+  <app-message-list></app-message-list>
+  <app-message-input (sendMessage)="sendMessage($event)"></app-message-input>
+</div>

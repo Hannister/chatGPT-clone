@@ -1,0 +1,35 @@
+.message-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  max-width: 80%;
+  margin-top: 40px;
+}
+
+.user-image {
+  width: 26px;
+  height: 26px;
+  border: 1px  var(--light-gray) solid;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: bold;
+  color: var(--light-gray);
+  margin-bottom: 5px;
+  font-size: 1em;
+
+}
+
+.message-text {
+  font-size: 1em;
+  color: var(--primary-text);
+}

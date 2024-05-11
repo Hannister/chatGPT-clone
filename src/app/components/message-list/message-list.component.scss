@@ -1,0 +1,16 @@
+.messages-container{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages{
+  align-self: flex-start;
+  margin-bottom: 90px;
+  }
+
+@media (max-width: 600px) {
+  .messages {
+    width: 100%;
+  }
+}

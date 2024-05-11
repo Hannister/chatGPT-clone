@@ -1,0 +1,12 @@
+<div class="icon">
+  <mat-icon
+    [style.background]="disabled ? 'var(--invalid-icon)' : backgroundColor"
+    [style.color]="disabled ? 'var(--dark-gray)' : iconColor"
+    matTooltip="{{ tooltip }}"
+    matTooltipPosition="above"
+    aria-label="Send message"
+    matSuffix
+    (click)="send()"
+    >arrow_upward</mat-icon
+  >
+</div>

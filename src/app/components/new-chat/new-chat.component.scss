@@ -1,0 +1,94 @@
+.default-message{
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+
+  .icon{
+    height: 44px;
+    border: 1px  var(--light-gray) solid;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+}
+
+.option-button-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 58%;
+  position: absolute;
+  bottom: 124px;
+  gap: 20px;
+
+  .option-button {
+    flex: 1 1 45%;
+    padding: 16px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--dark-gray);
+    border:solid 1px  var(--border-light);
+    color: var(--primary-text);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover{
+      background-color: var(--background-hover);
+      .send-message-button {
+        visibility: visible;
+      }
+    }
+
+  }
+
+  .option-button .title {
+    font-size: 0.9em;
+  }
+
+  .option-button .description {
+    font-size: 0.9em;
+    opacity: 0.4;
+  }
+
+  .send-message-button {
+    visibility: hidden;
+    transition: visibility ease-in-out;
+    transform: scale(0.9);
+  }
+}
+
+
+
+
+@media (max-width: 600px) {
+  .option-button-container {
+    width: 96%;
+    flex-direction: column;
+  }
+  .option-button-container .option-button:nth-child(1),
+  .option-button-container .option-button:nth-child(2) {
+      display: none;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .option-button-container {
+    width: 94%;
+    flex-direction: column;
+  }
+
+}
+
+
+
+

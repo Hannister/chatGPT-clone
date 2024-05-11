@@ -1,0 +1,28 @@
+<div class="contaoner">
+  <div class="default-message">
+    <img
+      class="icon"
+      alt="chatGPT icon"
+      src="assets/icons/chatGPT-icon-white.png"
+    />
+    <p>How can I help you today?</p>
+  </div>
+
+  <div class="option-button-container">
+    @for (option of buttonOptions; track option.id) {
+    <button class="option-button" (click)="onOptionSelect(option.id)">
+      <div>
+        <div class="title">{{ option.title }}</div>
+        <div class="description">{{ option.description }}</div>
+      </div>
+      <app-sent-message-button
+        [disabled]="false"
+        [backgroundColor]="'var(--dark-gray)'"
+        [iconColor]="'var(--primary-text)'"
+        [tooltip]="'Click to send'"
+        class="send-message-button"
+      ></app-sent-message-button>
+    </button>
+    }
+  </div>
+</div>

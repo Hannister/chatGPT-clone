@@ -1,0 +1,17 @@
+<div class="message-input">
+  <mat-form-field class="input-field" appearance="outline">
+    <input
+      class="input"
+      matInput
+      [(ngModel)]="newMessage"
+      (keyup.enter)="send()"
+      placeholder="Message ChatGPT"
+      required
+    />
+    <app-sent-message-button
+      [disabled]="!newMessage.length"
+      (click)="send()"
+      [tooltip]="'Send message'"
+    ></app-sent-message-button>
+  </mat-form-field>
+</div>

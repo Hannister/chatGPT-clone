@@ -1,0 +1,27 @@
+.message-input{
+  width: 60%;
+  display: flex;
+  background-color: var(--dark-gray);
+
+  .input-field{
+    width: 100%;
+
+    .input{
+      border-radius: var(--border-radius);
+      font-size: 1em;
+      color:  var(--primary-text);;
+    }
+
+    .input::placeholder{
+      color: var(--border-light);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .message-input {
+    width: 100%;
+  }
+}
+
+

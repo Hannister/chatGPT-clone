@@ -1,0 +1,11 @@
+<div
+  *ngIf="messages$ | async as messages"
+  class="messages-container"
+  [ngClass]="{ messages: messages.length }"
+>
+  @for ( message of messages; track message.id) {
+  <app-message [message]="message"></app-message>
+  } @empty {
+  <app-new-chat></app-new-chat>
+  }
+</div>

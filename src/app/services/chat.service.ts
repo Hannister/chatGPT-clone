@@ -27,6 +27,7 @@ export class ChatService {
 
   startNewConversation(question: string): void {
     this.conversationId = this.utils.generateId();
+    // this.dataService.startNewConversation(this.conversationId) - http request for server
     this.router.navigate(['/chat', this.conversationId]).then(() => {
       this.sendMessage(question);
     });
@@ -41,10 +42,15 @@ export class ChatService {
       type: MessageType.question,
     };
 
+    // this.dataService.sendMessage(newMessage).subscribe({  - http request for server
+    //   next: (msg) => {
     let messages = this.messagesSubject.getValue();
     messages.push(newMessage);
     this.messagesSubject.next([...messages]);
     this.getChatGPTResponse(text);
+    //   },
+    //   error: (err) => console.error('Error sending message:', err),
+    // });
   }
 
   private getChatGPTResponse(question: string): void {
@@ -59,6 +65,9 @@ export class ChatService {
       type: MessageType.answer,
     };
 
+    // this.dataService.getChatGPTResponse(response).subscribe({  - http request for server
+    //   next: (msg) => {
+
     let messages = this.messagesSubject.getValue();
     messages.push(response);
     this.messagesSubject.next([...messages]);
@@ -67,6 +76,9 @@ export class ChatService {
       messages: messages,
     };
     this.saveMessages(currentConversation);
+    //   },
+    //   error: (err) => console.error('Error sending message:', err),
+    // });
   }
 
   private saveMessages(conversation: Conversation): void {
@@ -84,6 +96,16 @@ export class ChatService {
       return JSON.parse(savedConversation).messages;
     } else {
       return [];
+      // this.dataService.loadConversation(conversationId).subscribe({ - http request for server
+      //   next: (conversation) => {
+      //     if (conversation) {
+      //       return conversation.messages;
+      //     } else {
+      //       return [];
+      //     }
+      //   },
+      //   error: (err) => console.error('Error sending message:', err),
+      // });
     }
   }
 

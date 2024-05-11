@@ -1,3 +1,7 @@
+# ChatgptClone DEMO
+
+https://hannister.github.io/chatGPT-clone/chat
+
 # ChatgptClone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.

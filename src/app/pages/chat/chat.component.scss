@@ -10,6 +10,7 @@
   align-items: center;
   overflow-y: auto;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 
   app-message-list, app-message-input{
     width: 100%;

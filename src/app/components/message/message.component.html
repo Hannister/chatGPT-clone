@@ -2,6 +2,6 @@
   <img class="user-image" [src]="message.user?.image" alt="User Image" />
   <div class="text-content">
     <span class="user-name">{{ message.user?.name }}</span>
-    <span class="message-text">{{ message.content }}</span>
+    <span class="message-text">{{ message.content | breakText }}</span>
   </div>
 </div>

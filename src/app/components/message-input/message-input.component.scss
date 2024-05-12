@@ -1,18 +1,18 @@
-.message-input{
-  width: 60%;
+.message-input {
+  width: 70%;
   display: flex;
   background-color: var(--dark-gray);
 
-  .input-field{
+  .input-field {
     width: 100%;
 
-    .input{
+    .input {
       border-radius: var(--border-radius);
       font-size: 1em;
-      color:  var(--primary-text);;
+      color: var(--primary-text);
     }
 
-    .input::placeholder{
+    .input::placeholder {
       color: var(--border-light);
     }
   }
@@ -23,5 +23,3 @@
     width: 100%;
   }
 }
-
-
